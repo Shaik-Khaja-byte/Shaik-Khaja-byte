@@ -5,29 +5,29 @@
 
 # Shaik Khaja
 
-> Software Engineer | Full Stack Developer | AI/ML Enthusiast | Problem Solver
+> Software Engineer • Full Stack Developer • AI/ML Enthusiast
 
 ---
 
-<!-- Badges -->
+<!-- Badges (compact) -->
 <p align="left">
-  <img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=Shaik-Khaja-byte&show_icons=true&theme=dark&hide_border=true" />
-  <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shaik-Khaja-byte&layout=compact&theme=dark&hide_border=true" />
+   <img height="140" src="https://github-readme-stats.vercel.app/api?username=Shaik-Khaja-byte&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github" alt="GitHub stats" />
+   <img height="140" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shaik-Khaja-byte&layout=compact&theme=github_dark&hide_border=true" alt="Top languages" />
 </p>
 
 <p align="left">
-  <img alt="Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=Shaik-Khaja-byte&theme=dark&hide_border=true" />
-  <img alt="Contributions" src="https://activity-graph.herokuapp.com/graph?username=Shaik-Khaja-byte&theme=react-dark&area=true" />
+   <img height="110" src="https://streak-stats.demolab.com?user=Shaik-Khaja-byte&theme=github-dark-blue&hide_border=true" alt="Streak" />
 </p>
 
 ---
 
 ## About
 
-Passionate about building intelligent systems and scalable full-stack products. I focus on practical AI/ML, backend engineering, and end-to-end product delivery. I enjoy leading teams, shipping under tight timelines, and turning ambiguous problems into production-ready solutions.
-
-- Location: India
-- Current focus: Software Engineering, AI-powered products, scalable backend systems
+- Computer Science student passionate about software engineering and product building
+- Interested in backend systems, AI/ML, RAG pipelines, and scalable application design
+- Enjoy solving engineering problems through practical and production-oriented solutions
+- Experienced in leading teams during national and international hackathons
+- Strong focus on execution, communication, and continuous learning
 
 ---
 
@@ -42,54 +42,79 @@ Passionate about building intelligent systems and scalable full-stack products. 
 
 ## Tech Stack
 
-<p>
-  <img src="https://skillicons.dev/icons?i=cpp,python,java,js,react,nodejs,mongodb,express,fastapi,docker,git,linux" alt="tech icons"/>
+### Languages
+
+`C++` `Python` `Java` `JavaScript` `C`
+
+### Frameworks & Technologies
+
+`MERN` `Node.js` `FastAPI` `MongoDB` `SQL` `LangChain` `RAG` `Machine Learning`
+
+### Tools & Concepts
+
+`Linux` `Git` `GitHub` `REST APIs` `DSA` `Backend Engineering` `Full Stack Development`
+
+<p align="left">
+   <img src="https://skillicons.dev/icons?i=cpp,python,java,javascript,nodejs,react,mongodb,express,fastapi,git,linux,vscode" alt="tech icons"/>
 </p>
 
-- Languages: C++, Python, Java, JavaScript, C
-- Frameworks & Tools: MERN, FastAPI, Node.js, MongoDB, SQL, LangChain, RAG systems
-- Concepts: DSA, Backend Engineering, AI/ML, Full Stack Development
+---
+
+## Featured Work
+
+- AI-powered RAG systems for intelligent document querying and contextual understanding
+- Full-stack web applications with scalable backend architecture
+- AI/ML projects focused on practical implementation and automation
+- Structured DSA and development learning repositories
+- Product-oriented hackathon solutions built under real-world constraints
 
 ---
 
-## Featured Projects
+## Hackathons & Achievements
 
-1. **AI-Document-Intelligence-System** — RAG-based document intelligence for contextual Q&A and semantic search. (Python, LangChain, RAG, APIs)
-   - Repo: https://github.com/Shaik-Khaja-byte/AI-Document-Intelligence-System
-
-2. **Crypto-Portfolio-Manager** — AI-assisted portfolio analytics and automated insights for crypto assets. (Python, ML, APIs)
-   - Repo: https://github.com/Shaik-Khaja-byte/Crypto-Portfolio-Manager
-
-3. **Zariya** — End-to-end travel-booking style application with modern UI and scalable backend. (MERN, MongoDB, Node.js)
-   - Repo: https://github.com/Shaik-Khaja-byte/Zariya
-
-4. **DhanyaAI** — Practical AI/ML application focused on domain-specific intelligent features. (Python, ML)
-   - Repo: https://github.com/Shaik-Khaja-byte/DhanyaAI
-
-5. **DSA-Journey** — Curated and optimized DSA solutions and notes in C++.
-   - Repo: https://github.com/Shaik-Khaja-byte/DSA-Journey
-
-6. **Web-Development-Journey** — Frontend and full-stack learning projects and patterns.
-   - Repo: https://github.com/Shaik-Khaja-byte/Web-Development-Journey
+<table>
+   <tr>
+      <td align="center">
+         <img src="./assets/1.jpeg" alt="VISION 2047" style="width:220px; height:auto; object-fit:cover; border-radius:6px;" />
+         <p><strong>VISION 2047</strong><br>GDG RVCE — Winners</p>
+      </td>
+      <td align="center">
+         <img src="./assets/2.jpeg" alt="Hack-A-League" style="width:220px; height:auto; object-fit:cover; border-radius:6px;" />
+         <p><strong>Hack-A-League 4.0</strong><br>Winners</p>
+      </td>
+      <td align="center">
+         <img src="./assets/3.jpeg" alt="HackFest" style="width:220px; height:auto; object-fit:cover; border-radius:6px;" />
+         <p><strong>HackFest 2026</strong><br>Jury Appreciation</p>
+      </td>
+   </tr>
+   <tr>
+      <td align="center">
+         <img src="./assets/4.jpeg" alt="ANVESHANA" style="width:220px; height:auto; object-fit:cover; border-radius:6px;" />
+         <p><strong>ANVESHANA 2k26</strong><br>Winners</p>
+      </td>
+      <td align="center">
+         <img src="./assets/5.jpeg" alt="Dekathon" style="width:220px; height:auto; object-fit:cover; border-radius:6px;" />
+         <p><strong>Dekathon 4.0</strong><br>Best Socially Relevant Project</p>
+      </td>
+      <td></td>
+   </tr>
+</table>
 
 ---
 
-## Leadership & Achievements
+---
 
-- Team Lead — multiple national-level hackathon wins and jury recognitions.
-- VISION 2047 (GDG RVCE) — Winners — ₹50,000
-- HackFest 2026 (ISB I-Venture) — Jury Appreciation — ₹30,000
-- Hack-A-League 4.0 — Winners — ₹50,000
-- ANVESHANA 2k26 — Winners — ₹20,000
-- Dekathon 4.0 — Best Socially Relevant Project
+## Connect
+
+<p align="left">
+   <a href="https://www.linkedin.com/in/shaik-khaja-310386351/" target="_blank">LinkedIn</a>
+   •
+   <a href="mailto:khaja4756@gmail.com">Email</a>
+</p>
 
 ---
 
-## How I Work
-
-- Prioritize clarity: define minimal MVP, iterate fast, measure impact
-- Lean product mindset: ship features, get feedback, optimize
-- Strong testing and code quality practices for maintainability
+_Compact profile designed for recruiters and engineering managers._
 
 ---
 
