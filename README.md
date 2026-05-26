@@ -62,13 +62,13 @@ Build full-stack applications, AI-powered systems, and scalable backend architec
 <td align="center">
 <img src="./assets/1.jpeg" width="210"><br><br>
 <b>VISION 2047</b><br>
-GDG RVCE — Winners
+GDG RVCE - Winners
 </td>
 
 <td align="center">
 <img src="./assets/2.jpeg" width="210"><br><br>
 <b>Hack-A-League 4.0</b><br>
-National Level Hackathon
+National Level Winners
 </td>
 
 <td align="center">
