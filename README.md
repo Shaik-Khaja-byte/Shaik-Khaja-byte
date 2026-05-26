@@ -23,13 +23,13 @@ Focused on building scalable applications, intelligent systems, and practical AI
 
 ## About
 
-Computer Science student interested in backend engineering, AI/ML, RAG systems, and scalable product development. Experienced in leading teams and building practical, execution-focused solutions.
+Computer Science student focused on backend engineering, AI/ML systems, and scalable product development with strong interest in practical, execution-driven software engineering.
 
 ---
 
 ## What I Do
 
-Build full-stack applications, AI-powered systems, and backend architectures with a strong focus on problem solving, product thinking, and clean engineering practices.
+Build full-stack applications, AI-powered systems, and scalable backend architectures with a focus on problem solving, product thinking, and clean engineering.
 
 ---
 
@@ -59,48 +59,64 @@ Build full-stack applications, AI-powered systems, and backend architectures wit
 
 <table>
   <tr>
-    <td align="center">
-      <img src="./assets/1.jpeg" width="250" />
+    <td align="center" width="20%">
+      <img 
+        src="./assets/1.jpeg" 
+        width="210" 
+        alt="VISION 2047"
+      />
       <br><br>
       <strong>VISION 2047</strong>
       <br>
       GDG RVCE — Winners
     </td>
 
-    <td align="center">
-      <img src="./assets/2.jpeg" width="250" />
+    <td align="center" width="20%">
+      <img 
+        src="./assets/2.jpeg" 
+        width="210" 
+        alt="Hack-A-League 4.0"
+      />
       <br><br>
       <strong>Hack-A-League 4.0</strong>
       <br>
       National Level Hackathon
     </td>
 
-    <td align="center">
-      <img src="./assets/3.jpeg" width="250" />
+    <td align="center" width="20%">
+      <img 
+        src="./assets/3.jpeg" 
+        width="210" 
+        alt="HackFest ISB"
+      />
       <br><br>
       <strong>HackFest (ISB)</strong>
       <br>
       Jury Appreciation Award
     </td>
-  </tr>
 
-  <tr>
-    <td align="center">
-      <img src="./assets/4.jpeg" width="250" />
+    <td align="center" width="20%">
+      <img 
+        src="./assets/4.jpeg" 
+        width="210" 
+        alt="ANVESHANA 2k26"
+      />
       <br><br>
       <strong>ANVESHANA 2k26</strong>
       <br>
       National Level Winners
     </td>
 
-    <td align="center">
-      <img src="./assets/5.jpeg" width="250" />
+    <td align="center" width="20%">
+      <img 
+        src="./assets/5.jpeg" 
+        width="210" 
+        alt="Dekathon 4.0"
+      />
       <br><br>
       <strong>Dekathon 4.0</strong>
       <br>
       Best Socially Relevant Project
     </td>
-
-    <td></td>
   </tr>
 </table>
