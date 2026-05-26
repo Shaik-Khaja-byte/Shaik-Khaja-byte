@@ -58,65 +58,35 @@ Build full-stack applications, AI-powered systems, and scalable backend architec
 ## Hackathons & Achievements
 
 <table>
-  <tr>
-    <td align="center" width="20%">
-      <img 
-        src="./assets/1.jpeg" 
-        width="210" 
-        alt="VISION 2047"
-      />
-      <br><br>
-      <strong>VISION 2047</strong>
-      <br>
-      GDG RVCE — Winners
-    </td>
+<tr>
+<td align="center">
+<img src="./assets/1.jpeg" width="210"><br><br>
+<b>VISION 2047</b><br>
+GDG RVCE — Winners
+</td>
 
-    <td align="center" width="20%">
-      <img 
-        src="./assets/2.jpeg" 
-        width="210" 
-        alt="Hack-A-League 4.0"
-      />
-      <br><br>
-      <strong>Hack-A-League 4.0</strong>
-      <br>
-      National Level Hackathon
-    </td>
+<td align="center">
+<img src="./assets/2.jpeg" width="210"><br><br>
+<b>Hack-A-League 4.0</b><br>
+National Level Hackathon
+</td>
 
-    <td align="center" width="20%">
-      <img 
-        src="./assets/3.jpeg" 
-        width="210" 
-        alt="HackFest ISB"
-      />
-      <br><br>
-      <strong>HackFest (ISB)</strong>
-      <br>
-      Jury Appreciation Award
-    </td>
+<td align="center">
+<img src="./assets/3.jpeg" width="210"><br><br>
+<b>HackFest (ISB)</b><br>
+Jury Appreciation Award
+</td>
 
-    <td align="center" width="20%">
-      <img 
-        src="./assets/4.jpeg" 
-        width="210" 
-        alt="ANVESHANA 2k26"
-      />
-      <br><br>
-      <strong>ANVESHANA 2k26</strong>
-      <br>
-      National Level Winners
-    </td>
+<td align="center">
+<img src="./assets/4.jpeg" width="210"><br><br>
+<b>ANVESHANA 2k26</b><br>
+National Level Winners
+</td>
 
-    <td align="center" width="20%">
-      <img 
-        src="./assets/5.jpeg" 
-        width="210" 
-        alt="Dekathon 4.0"
-      />
-      <br><br>
-      <strong>Dekathon 4.0</strong>
-      <br>
-      Best Socially Relevant Project
-    </td>
-  </tr>
+<td align="center">
+<img src="./assets/5.jpeg" width="210"><br><br>
+<b>Dekathon 4.0</b><br>
+Best Socially Relevant Project
+</td>
+</tr>
 </table>
