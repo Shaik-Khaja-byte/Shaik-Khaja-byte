@@ -60,7 +60,7 @@
 
   <!-- Total contributions -->
   <g transform="translate(375, 52)">
-    <text x="0" y="30" class="value accent-purple" text-anchor="middle" style="font-size: 28px; font-weight: 700;">206</text>
+    <text x="0" y="30" class="value accent-purple" text-anchor="middle" style="font-size: 28px; font-weight: 700;">208</text>
     <text x="0" y="48" class="label" text-anchor="middle">Total Contributions</text>
     <text x="0" y="64" class="label" text-anchor="middle" style="font-size: 10px;">past year</text>
   </g>
