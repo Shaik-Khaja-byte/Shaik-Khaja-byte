@@ -18,43 +18,15 @@ Hackathons taught me how to ship under pressure. The gallery below has some of t
 
 <img src="./assets/svg/divider.svg" width="100%" />
 
-<div align="center">
-
 ## Tech Stack
 
-<br/>
-
-**Languages**
-<br/>
-<img src="https://skillicons.dev/icons?i=cpp,python,java,javascript,kotlin,c" />
-
-<br/><br/>
-
-**Mobile & Frontend**
-<br/>
-<img src="https://skillicons.dev/icons?i=androidstudio,react,html,css,materialui" />
-
-<br/><br/>
-
-**Backend & Data**
-<br/>
-<img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,sqlite,mongodb" />
-
-<br/><br/>
-
-**AI / ML**
-<br/>
-<img src="https://skillicons.dev/icons?i=python,sklearn,tensorflow" />
-<br/>
-<code>LangChain</code> &nbsp; <code>FAISS</code> &nbsp; <code>RAG</code> &nbsp; <code>HuggingFace</code>
-
-<br/><br/>
-
-**Tools & Platforms**
-<br/>
-<img src="https://skillicons.dev/icons?i=git,github,linux,vscode,docker" />
-
-</div>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=cpp,python,java,javascript,kotlin,c,androidstudio,react,html,css,materialui" />
+  <br/><br/>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,sqlite,mongodb,sklearn,tensorflow,git,github,linux,vscode,docker" />
+  <br/>
+  <code>LangChain</code> &nbsp; <code>FAISS</code> &nbsp; <code>RAG</code> &nbsp; <code>HuggingFace</code>
+</p>
 
 <img src="./assets/svg/divider.svg" width="100%" />
 
@@ -136,13 +108,7 @@ RAG system. Upload a PDF, ask questions, get answers grounded in the actual docu
 
 <img src="./assets/svg/divider.svg" width="100%" />
 
-<div align="center">
-
 ## Activity
-
-<sub>Generated daily by a <a href=".github/workflows/update-stats.yml">GitHub Action</a>. No external widgets.</sub>
-
-<br/><br/>
 
 <p align="center">
   <img src="./assets/svg/streak.svg" width="48%" />
@@ -151,8 +117,6 @@ RAG system. Upload a PDF, ask questions, get answers grounded in the actual docu
 <p align="center">
   <img src="./assets/svg/contributions.svg" width="97%" />
 </p>
-
-</div>
 
 <img src="./assets/svg/divider.svg" width="100%" />
 
