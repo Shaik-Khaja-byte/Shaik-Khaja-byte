@@ -18,53 +18,43 @@ Hackathons taught me how to ship under pressure. The gallery below has some of t
 
 <img src="./assets/svg/divider.svg" width="100%" />
 
+<div align="center">
+
 ## Tech Stack
 
-<table>
-<tr>
-<td align="center" width="50%">
+<br/>
 
 **Languages**
-
+<br/>
 <img src="https://skillicons.dev/icons?i=cpp,python,java,javascript,kotlin,c" />
 
-</td>
-<td align="center" width="50%">
+<br/><br/>
 
 **Mobile & Frontend**
-
+<br/>
 <img src="https://skillicons.dev/icons?i=androidstudio,react,html,css,materialui" />
 
-</td>
-</tr>
-<tr>
-<td align="center">
+<br/><br/>
 
 **Backend & Data**
-
+<br/>
 <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,sqlite,mongodb" />
 
-</td>
-<td align="center">
+<br/><br/>
 
 **AI / ML**
-
+<br/>
 <img src="https://skillicons.dev/icons?i=python,sklearn,tensorflow" />
+<br/>
+<code>LangChain</code> &nbsp; <code>FAISS</code> &nbsp; <code>RAG</code> &nbsp; <code>HuggingFace</code>
 
-`LangChain` `FAISS` `RAG` `HuggingFace`
-
-</td>
-</tr>
-<tr>
-<td align="center" colspan="2">
+<br/><br/>
 
 **Tools & Platforms**
-
+<br/>
 <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,docker" />
 
-</td>
-</tr>
-</table>
+</div>
 
 <img src="./assets/svg/divider.svg" width="100%" />
 
@@ -146,18 +136,23 @@ RAG system. Upload a PDF, ask questions, get answers grounded in the actual docu
 
 <img src="./assets/svg/divider.svg" width="100%" />
 
+<div align="center">
+
 ## Activity
 
 <sub>Generated daily by a <a href=".github/workflows/update-stats.yml">GitHub Action</a>. No external widgets.</sub>
 
+<br/><br/>
+
 <p align="center">
-  <img src="./assets/svg/stats.svg" width="47%" />
-  <img src="./assets/svg/streak.svg" width="47%" />
+  <img src="./assets/svg/streak.svg" width="48%" />
+  <img src="./assets/svg/langs.svg" width="48%" />
 </p>
 <p align="center">
-  <img src="./assets/svg/langs.svg" width="47%" />
-  <img src="./assets/svg/contributions.svg" width="95%" />
+  <img src="./assets/svg/contributions.svg" width="97%" />
 </p>
+
+</div>
 
 <img src="./assets/svg/divider.svg" width="100%" />
 

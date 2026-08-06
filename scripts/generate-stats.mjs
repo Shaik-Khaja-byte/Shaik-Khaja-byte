@@ -307,27 +307,27 @@ const statsSvg = cardShell(
 
 const streakBody = `
   <!-- Current streak -->
-  <g transform="translate(70, 55)">
+  <g transform="translate(75, 52)">
     <text x="0" y="30" class="value accent" text-anchor="middle" style="font-size: 28px; font-weight: 700;">${currentStreak}</text>
     <text x="0" y="48" class="label" text-anchor="middle">Current Streak</text>
     <text x="0" y="64" class="label" text-anchor="middle" style="font-size: 10px;">days</text>
   </g>
 
   <!-- Separator -->
-  <line x1="145" y1="48" x2="145" y2="118" class="card-border" stroke-width="1" opacity="0.3"/>
+  <line x1="150" y1="48" x2="150" y2="124" class="card-border" stroke-width="1" opacity="0.3"/>
 
   <!-- Longest streak -->
-  <g transform="translate(215, 55)">
+  <g transform="translate(225, 52)">
     <text x="0" y="30" class="value accent-blue" text-anchor="middle" style="font-size: 28px; font-weight: 700;">${longestStreak}</text>
     <text x="0" y="48" class="label" text-anchor="middle">Longest Streak</text>
     <text x="0" y="64" class="label" text-anchor="middle" style="font-size: 10px;">days</text>
   </g>
 
   <!-- Separator -->
-  <line x1="290" y1="48" x2="290" y2="118" class="card-border" stroke-width="1" opacity="0.3"/>
+  <line x1="300" y1="48" x2="300" y2="124" class="card-border" stroke-width="1" opacity="0.3"/>
 
   <!-- Total contributions -->
-  <g transform="translate(355, 55)">
+  <g transform="translate(375, 52)">
     <text x="0" y="30" class="value accent-purple" text-anchor="middle" style="font-size: 28px; font-weight: 700;">${fmt(totalContribs)}</text>
     <text x="0" y="48" class="label" text-anchor="middle">Total Contributions</text>
     <text x="0" y="64" class="label" text-anchor="middle" style="font-size: 10px;">past year</text>
@@ -335,7 +335,7 @@ const streakBody = `
 `;
 
 const streakSvg = cardShell(
-  "Contribution Streak", 420, 140, streakBody,
+  "Contribution Streak", 450, 150, streakBody,
   svgIcon("fire")
 );
 
@@ -344,24 +344,24 @@ const streakSvg = cardShell(
 /* ------------------------------------------------------------------ */
 
 // Horizontal stacked bar
-let barX = 20;
-const barsWidth = 380;
+let barX = 25;
+const barsWidth = 400;
 const langBars = topLangs
   .map(([name, v]) => {
     const w = Math.max(6, (v.count / langTotal) * barsWidth);
-    const rect = `<rect x="${barX}" y="48" width="${w}" height="8" rx="4" fill="${v.color}"/>`;
+    const rect = `<rect x="${barX}" y="52" width="${w}" height="10" rx="5" fill="${v.color}"/>`;
     barX += w;
     return rect;
   })
   .join("\n  ");
 
-// Legend grid
+// Legend grid (2 rows of 3 cols)
 const langLegend = topLangs
   .map(([name, v], i) => {
     const col = i % 3;
     const row = Math.floor(i / 3);
-    const x = 20 + col * 134;
-    const y = 78 + row * 22;
+    const x = 25 + col * 140;
+    const y = 88 + row * 24;
     const pct = ((v.count / langTotal) * 100).toFixed(1);
     return `
     <circle cx="${x}" cy="${y}" r="4" fill="${v.color}"/>
@@ -369,10 +369,8 @@ const langLegend = topLangs
   })
   .join("\n  ");
 
-const langsHeight = 78 + Math.ceil(topLangs.length / 3) * 22 + 16;
-
 const langsSvg = cardShell(
-  "Most Used Languages", 420, langsHeight,
+  "Most Used Languages", 450, 150,
   `${langBars}\n  ${langLegend}`,
   svgIcon("code")
 );
