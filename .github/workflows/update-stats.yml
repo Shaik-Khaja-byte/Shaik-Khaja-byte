@@ -1,0 +1,45 @@
+name: Update Profile Stats
+
+on:
+  schedule:
+    # Once a day, 03:00 UTC
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+# Prevent duplicate runs on the same branch
+concurrency:
+  group: stats-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate stat SVGs
+        env:
+          GH_USERNAME: ${{ github.repository_owner }}
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
+        run: node scripts/generate-stats.mjs
+
+      - name: Commit updated SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/svg/stats.svg assets/svg/streak.svg assets/svg/langs.svg assets/svg/contributions.svg
+          git diff --staged --quiet || git commit -m "chore: update profile stats [skip ci]"
+          git push

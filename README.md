@@ -1,92 +1,166 @@
-<!-- =======================================================
-     Shaik Khaja — Minimal Professional GitHub Profile
-======================================================= -->
+<div align="center">
 
-# Shaik Khaja
+<img src="./assets/svg/header.svg" width="100%" alt="Shaik Khaja" />
 
-> Software Engineer • Full Stack Developer • AI/ML Enthusiast
+<sub>Computer Science Undergraduate</sub>
 
-Focused on building scalable applications, intelligent systems, and practical AI-driven products.
+</div>
 
----
-
-<!-- Stats -->
-
-<p align="left">
-  <img 
-    src="https://streak-stats.demolab.com?user=Shaik-Khaja-byte&theme=dark&hide_border=true&ring=F59E0B&fire=F59E0B&currStreakLabel=F59E0B&sideLabels=ffffff&dates=9ca3af&sideNums=ffffff&currStreakNum=ffffff&border_radius=8&card_width=850" 
-    alt="GitHub Streak"
-  />
-</p>
-
----
+<img src="./assets/svg/divider.svg" width="100%" />
 
 ## About
 
-Computer Science student focused on backend engineering, AI/ML systems, and scalable product development with strong interest in practical, execution-driven software engineering.
+Building things to understand how they work.
 
----
+Interested in backend engineering, AI, data analysis, distributed systems, open source, and developer tools.
 
-## What I Do
+Hackathons taught me how to ship under pressure. The gallery below has some of those stories.
 
-Build full-stack applications, AI-powered systems, and scalable backend architectures with a focus on problem solving, product thinking, and clean engineering.
-
----
+<img src="./assets/svg/divider.svg" width="100%" />
 
 ## Tech Stack
 
-### Languages
-
-`C++` `Python` `Java` `JavaScript` `C`
-
-### Frameworks & Technologies
-
-`MERN` `Node.js` `FastAPI` `MongoDB` `SQL` `LangChain` `RAG` `Machine Learning`
-
-### Tools & Concepts
-
-`Linux` `Git` `GitHub` `REST APIs` `DSA` `Backend Engineering` `Full Stack Development`
-
-<br>
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=cpp,python,java,javascript,nodejs,react,mongodb,express,fastapi,git,linux,vscode" />
-</p>
-
----
-
-## Hackathons & Achievements
-
 <table>
 <tr>
-<td align="center">
-<img src="./assets/1.jpeg" width="210"><br><br>
-<b>VISION 2047</b><br>
-GDG RVCE - Winners
-</td>
+<td align="center" width="50%">
 
-<td align="center">
-<img src="./assets/2.jpeg" width="210"><br><br>
-<b>Hack-A-League 4.0</b><br>
-National Level Winners
-</td>
+**Languages**
 
-<td align="center">
-<img src="./assets/3.jpeg" width="210"><br><br>
-<b>HackFest (ISB)</b><br>
-Jury Appreciation Award
-</td>
+<img src="https://skillicons.dev/icons?i=cpp,python,java,javascript,kotlin,c" />
 
-<td align="center">
-<img src="./assets/4.jpeg" width="210"><br><br>
-<b>ANVESHANA 2k26</b><br>
-National Level Winners
 </td>
+<td align="center" width="50%">
 
+**Mobile & Frontend**
+
+<img src="https://skillicons.dev/icons?i=androidstudio,react,html,css,materialui" />
+
+</td>
+</tr>
+<tr>
 <td align="center">
-<img src="./assets/5.jpeg" width="210"><br><br>
-<b>Dekathon 4.0</b><br>
-Best Socially Relevant Project
+
+**Backend & Data**
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,sqlite,mongodb" />
+
+</td>
+<td align="center">
+
+**AI / ML**
+
+<img src="https://skillicons.dev/icons?i=python,sklearn,tensorflow" />
+
+`LangChain` `FAISS` `RAG` `HuggingFace`
+
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+
+**Tools & Platforms**
+
+<img src="https://skillicons.dev/icons?i=git,github,linux,vscode,docker" />
+
 </td>
 </tr>
 </table>
+
+<img src="./assets/svg/divider.svg" width="100%" />
+
+## Projects
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### BhaiHisaab
+
+Trip-expense tracker for Android. Splits bills, tracks who owes what, reflects money leaving your account the moment you lend it.
+
+Simple mode (shared pool) and Complex mode (individual accounts). Fully offline.
+
+`Kotlin` `Jetpack Compose` `Room` `Material 3`
+
+<a href="https://github.com/Shaik-Khaja-byte/BhaiHisaab"><img src="https://img.shields.io/badge/Source-181717?style=flat-square&logo=github&logoColor=white" /></a>
+
+</td>
+<td width="33%" valign="top">
+
+### Crypto Portfolio Manager
+
+Analytics pipeline. Live market data, risk engine, rule-based allocation, 7-day ML forecast, Streamlit dashboard with PDF reports.
+
+`Python` `Streamlit` `Pandas` `scikit-learn` `SQLite`
+
+<a href="https://github.com/Shaik-Khaja-byte/Crypto-Portfolio-Manager"><img src="https://img.shields.io/badge/Source-181717?style=flat-square&logo=github&logoColor=white" /></a>
+
+</td>
+<td width="33%" valign="top">
+
+### AI Document Intelligence
+
+RAG system. Upload a PDF, ask questions, get answers grounded in the actual document. FAISS retrieval, LLaMA 3.3 70B via Groq, multi-turn memory, source inspection.
+
+`LangChain` `FAISS` `Groq` `HuggingFace` `Streamlit`
+
+<a href="https://github.com/Shaik-Khaja-byte/AI-Document-Intelligence-System"><img src="https://img.shields.io/badge/Source-181717?style=flat-square&logo=github&logoColor=white" /></a>
+
+</td>
+</tr>
+</table>
+
+<img src="./assets/svg/divider.svg" width="100%" />
+
+## Hackathons
+
+<table>
+<tr>
+<td align="center" width="20%">
+<img src="./assets/1.jpeg" width="180" style="border-radius: 8px;" /><br/><br/>
+<b>VISION 2047</b><br/>
+<sub>GDG RVCE · Winners</sub>
+</td>
+<td align="center" width="20%">
+<img src="./assets/2.jpeg" width="180" style="border-radius: 8px;" /><br/><br/>
+<b>Hack-A-League 4.0</b><br/>
+<sub>National Level · Winners</sub>
+</td>
+<td align="center" width="20%">
+<img src="./assets/3.jpeg" width="180" style="border-radius: 8px;" /><br/><br/>
+<b>HackFest (ISB)</b><br/>
+<sub>Jury Appreciation Award</sub>
+</td>
+<td align="center" width="20%">
+<img src="./assets/4.jpeg" width="180" style="border-radius: 8px;" /><br/><br/>
+<b>ANVESHANA 2k26</b><br/>
+<sub>National Level · Winners</sub>
+</td>
+<td align="center" width="20%">
+<img src="./assets/5.jpeg" width="180" style="border-radius: 8px;" /><br/><br/>
+<b>Dekathon 4.0</b><br/>
+<sub>Best Socially Relevant Project</sub>
+</td>
+</tr>
+</table>
+
+<img src="./assets/svg/divider.svg" width="100%" />
+
+## Activity
+
+<sub>Generated daily by a <a href=".github/workflows/update-stats.yml">GitHub Action</a>. No external widgets.</sub>
+
+<p align="center">
+  <img src="./assets/svg/stats.svg" width="47%" />
+  <img src="./assets/svg/streak.svg" width="47%" />
+</p>
+<p align="center">
+  <img src="./assets/svg/langs.svg" width="47%" />
+  <img src="./assets/svg/contributions.svg" width="95%" />
+</p>
+
+<img src="./assets/svg/divider.svg" width="100%" />
+
+<div align="center">
+<sub>Still figuring things out. Thanks for stopping by.</sub>
+</div>
