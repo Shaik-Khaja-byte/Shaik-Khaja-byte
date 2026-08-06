@@ -1,0 +1,64 @@
+<svg width="420" height="138" viewBox="0 0 420 138" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Dark theme (default) */
+    .card-bg   { fill: #161b22; }
+    .card-border { stroke: #30363d; }
+    .title     { font: 600 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #e6edf3; }
+    .label     { font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #8b949e; }
+    .value     { font: 600 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #e6edf3; }
+    .accent    { fill: #3fb950; }
+    .accent-blue { fill: #58a6ff; }
+    .accent-purple { fill: #bc8cff; }
+    .icon-fill { fill: #8b949e; }
+
+    /* Light theme */
+    @media (prefers-color-scheme: light) {
+      .card-bg   { fill: #f6f8fa; }
+      .card-border { stroke: #d0d7de; }
+      .title     { fill: #1f2328; }
+      .label     { fill: #656d76; }
+      .value     { fill: #1f2328; }
+      .accent    { fill: #1a7f37; }
+      .accent-blue { fill: #0969da; }
+      .accent-purple { fill: #8250df; }
+      .icon-fill { fill: #656d76; }
+    }
+  </style>
+
+  <!-- Card background -->
+  <rect x="0.5" y="0.5" width="419" height="137" rx="12" class="card-bg card-border" stroke-width="1" fill="none"/>
+  <rect x="1" y="1" width="418" height="136" rx="11.5" class="card-bg"/>
+  <rect x="0.5" y="0.5" width="419" height="137" rx="12" fill="none" class="card-border" stroke-width="1"/>
+
+  <!-- Title row -->
+  <g transform="translate(20, 24)">
+    <svg x="0" y="-6" width="16" height="16" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z" class="icon-fill"/></svg>
+    <text x="22" y="4" class="title">Most Used Languages</text>
+  </g>
+
+  <!-- Body -->
+  <rect x="20" y="48" width="95" height="8" rx="4" fill="#DA5B0B"/>
+  <rect x="115" y="48" width="95" height="8" rx="4" fill="#f1e05a"/>
+  <rect x="210" y="48" width="63.33333333333333" height="8" rx="4" fill="#f34b7d"/>
+  <rect x="273.3333333333333" y="48" width="63.33333333333333" height="8" rx="4" fill="#e34c26"/>
+  <rect x="336.66666666666663" y="48" width="31.666666666666664" height="8" rx="4" fill="#A97BFF"/>
+  <rect x="368.3333333333333" y="48" width="31.666666666666664" height="8" rx="4" fill="#3572A5"/>
+  
+    <circle cx="20" cy="78" r="4" fill="#DA5B0B"/>
+    <text x="30" y="82" class="label">Jupyter Notebook <tspan style="font-size:10px">25.0%</tspan></text>
+  
+    <circle cx="154" cy="78" r="4" fill="#f1e05a"/>
+    <text x="164" y="82" class="label">JavaScript <tspan style="font-size:10px">25.0%</tspan></text>
+  
+    <circle cx="288" cy="78" r="4" fill="#f34b7d"/>
+    <text x="298" y="82" class="label">C++ <tspan style="font-size:10px">16.7%</tspan></text>
+  
+    <circle cx="20" cy="100" r="4" fill="#e34c26"/>
+    <text x="30" y="104" class="label">HTML <tspan style="font-size:10px">16.7%</tspan></text>
+  
+    <circle cx="154" cy="100" r="4" fill="#A97BFF"/>
+    <text x="164" y="104" class="label">Kotlin <tspan style="font-size:10px">8.3%</tspan></text>
+  
+    <circle cx="288" cy="100" r="4" fill="#3572A5"/>
+    <text x="298" y="104" class="label">Python <tspan style="font-size:10px">8.3%</tspan></text>
+</svg>
