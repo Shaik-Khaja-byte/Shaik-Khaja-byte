@@ -167,6 +167,7 @@ const weeks = user.contributionsCollection.contributionCalendar.weeks;
 // Streaks
 const computeStreaks = (days) => {
   let longest = 0, running = 0, current = 0;
+
   for (const d of days) {
     if (d.contributionCount > 0) {
       running += 1;
@@ -175,12 +176,19 @@ const computeStreaks = (days) => {
       running = 0;
     }
   }
+
   for (let i = days.length - 1; i >= 0; i--) {
     if (days[i].contributionCount > 0) current += 1;
     else break;
   }
+
   return { current, longest };
 };
+
+console.log("Last 7 contribution days:");
+days.slice(-7).forEach((d) => {
+  console.log(`${d.date}: ${d.contributionCount}`);
+});
 
 const { current: currentStreak, longest: longestStreak } = computeStreaks(days);
 
