@@ -2,9 +2,17 @@ name: Update Profile Stats
 
 on:
   schedule:
-    # Once a day, 03:00 UTC
+    # Morning — 8:30 AM IST
     - cron: "0 3 * * *"
+
+    # Afternoon — 2:30 PM IST
+    - cron: "0 9 * * *"
+
+    # Night — 9:00 PM IST
+    - cron: "30 15 * * *"
+
   workflow_dispatch: {}
+
   push:
     branches: [main]
 
