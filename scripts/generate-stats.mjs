@@ -14,7 +14,7 @@
  * -------------------------------------------------------------------
  */
 
-import { writeFileSync, mkdirSync } from "fs";
+import { writeFileSync, mkdirSync, existsSync, readFileSync } from "fs";
 
 /* ------------------------------------------------------------------ */
 /*  Configuration                                                      */
@@ -24,11 +24,43 @@ const USERNAME = process.env.GH_USERNAME;
 const TOKEN    = process.env.STATS_TOKEN;
 const MAX_RETRIES = 3;
 const RETRY_DELAY_MS = 2000;
+const TIMEZONE = "Asia/Kolkata";
 
 if (!USERNAME || !TOKEN) {
   console.error("Missing GH_USERNAME or STATS_TOKEN env vars.");
   process.exit(1);
 }
+
+/* ------------------------------------------------------------------ */
+/*  Timezone helpers (built-in Intl, zero dependencies)                 */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Returns today's date as "YYYY-MM-DD" in the configured timezone.
+ * Uses Intl.DateTimeFormat — no external packages needed.
+ */
+const getTodayIST = () => {
+  const now = new Date();
+  // Build YYYY-MM-DD from Intl parts to avoid locale formatting quirks
+  const fmt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: TIMEZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  return fmt.format(now); // en-CA locale gives YYYY-MM-DD
+};
+
+/**
+ * Subtract one calendar day from a "YYYY-MM-DD" string.
+ * Pure date arithmetic — no timezone ambiguity.
+ */
+const prevDay = (dateStr) => {
+  const [y, m, d] = dateStr.split("-").map(Number);
+  const dt = new Date(Date.UTC(y, m - 1, d));
+  dt.setUTCDate(dt.getUTCDate() - 1);
+  return dt.toISOString().slice(0, 10);
+};
 
 /* ------------------------------------------------------------------ */
 /*  Design Tokens — GitHub Primer–inspired                             */
@@ -140,7 +172,18 @@ const query = `
 
 console.log(`Fetching stats for @${USERNAME}...`);
 const data = await graphql(query);
-const user = data.user;
+
+/* ------------------------------------------------------------------ */
+/*  Data validation — never overwrite valid SVGs with garbage           */
+/* ------------------------------------------------------------------ */
+
+const user = data?.user;
+if (!user) {
+  throw new Error("GraphQL returned null user — check STATS_TOKEN permissions.");
+}
+if (!user.contributionsCollection?.contributionCalendar?.weeks?.length) {
+  throw new Error("Contribution calendar is missing or empty — API may be degraded.");
+}
 
 /* ------------------------------------------------------------------ */
 /*  Derived stats                                                      */
@@ -161,13 +204,39 @@ const days = user.contributionsCollection.contributionCalendar.weeks
   .flatMap((w) => w.contributionDays)
   .sort((a, b) => new Date(a.date) - new Date(b.date));
 
+if (days.length === 0) {
+  throw new Error("No contribution days found after flattening — data is corrupt.");
+}
+
 // Contribution weeks (for heatmap)
 const weeks = user.contributionsCollection.contributionCalendar.weeks;
 
-// Streaks
-const computeStreaks = (days) => {
-  let longest = 0, running = 0, current = 0;
+/* ------------------------------------------------------------------ */
+/*  Streak computation — explicitly date-aware, IST timezone            */
+/* ------------------------------------------------------------------ */
 
+/**
+ * Compute current and longest contribution streaks.
+ *
+ * @param {Array} days  - Sorted contribution day objects [{date, contributionCount}, ...]
+ * @param {string} todayStr - Today's date as "YYYY-MM-DD" in the user's timezone
+ * @returns {{current: number, longest: number}}
+ *
+ * Current streak: consecutive days ending on todayStr with contributions > 0.
+ *   - If todayStr has 0 contributions → current = 0.
+ *   - If todayStr is not in the data → current = 0 (treated as no contribution today).
+ *
+ * Longest streak: maximum consecutive run in the entire dataset (independent).
+ */
+const computeStreaks = (days, todayStr) => {
+  // Build a date → contributionCount map for O(1) lookup
+  const dayMap = new Map();
+  for (const d of days) {
+    dayMap.set(d.date, d.contributionCount);
+  }
+
+  // --- Longest streak (forward scan — unchanged, already correct) ---
+  let longest = 0, running = 0;
   for (const d of days) {
     if (d.contributionCount > 0) {
       running += 1;
@@ -177,20 +246,50 @@ const computeStreaks = (days) => {
     }
   }
 
-  for (let i = days.length - 1; i >= 0; i--) {
-    if (days[i].contributionCount > 0) current += 1;
-    else break;
+  // --- Current streak (date-aware backward walk from today) ---
+  let current = 0;
+  const todayCount = dayMap.get(todayStr);
+
+  // If today is not in the calendar or has 0 contributions → current = 0
+  if (todayCount === undefined || todayCount === 0) {
+    return { current: 0, longest };
+  }
+
+  // Today has contributions — count backward one calendar day at a time
+  let checkDate = todayStr;
+  while (true) {
+    const count = dayMap.get(checkDate);
+    if (count === undefined || count === 0) break;
+    current += 1;
+    checkDate = prevDay(checkDate);
   }
 
   return { current, longest };
 };
 
-console.log("Last 7 contribution days:");
+// Resolve today in IST
+const todayIST = getTodayIST();
+
+// Diagnostic logging
+console.log(`\n--- Streak Diagnostics ---`);
+console.log(`Timezone:        ${TIMEZONE}`);
+console.log(`Today (IST):     ${todayIST}`);
+console.log(`Calendar range:  ${days[0].date} → ${days[days.length - 1].date}`);
+console.log(`Today in data:   ${days.some(d => d.date === todayIST) ? "YES" : "NO"}`);
+const todayEntry = days.find(d => d.date === todayIST);
+console.log(`Today's count:   ${todayEntry ? todayEntry.contributionCount : "(not found)"}`);
+console.log(`\nLast 7 contribution days:`);
 days.slice(-7).forEach((d) => {
-  console.log(`${d.date}: ${d.contributionCount}`);
+  const marker = d.date === todayIST ? " ← TODAY" : "";
+  console.log(`  ${d.date}: ${d.contributionCount}${marker}`);
 });
 
-const { current: currentStreak, longest: longestStreak } = computeStreaks(days);
+const { current: currentStreak, longest: longestStreak } = computeStreaks(days, todayIST);
+
+console.log(`\nCurrent Streak:  ${currentStreak}`);
+console.log(`Longest Streak:  ${longestStreak}`);
+console.log(`Total Contribs:  ${totalContribs}`);
+console.log(`--- End Diagnostics ---\n`);
 
 // Top languages by repo count
 const langCounts = {};
@@ -525,6 +624,14 @@ const contributionsSvg = buildContributionsHeatmap();
 /* ------------------------------------------------------------------ */
 
 mkdirSync("assets/svg", { recursive: true });
+
+// --- Pre-write validation: refuse to overwrite valid SVGs with zeros ---
+if (totalContribs === 0 && longestStreak === 0 && totalCommits === 0) {
+  throw new Error(
+    "All stats are zero — this is almost certainly a data fetch problem. " +
+    "Refusing to overwrite existing SVGs. Existing profile stats are preserved."
+  );
+}
 
 writeFileSync("assets/svg/stats.svg", statsSvg);
 console.log("  ✓ stats.svg");

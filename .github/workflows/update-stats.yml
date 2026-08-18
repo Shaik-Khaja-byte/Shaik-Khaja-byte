@@ -42,6 +42,7 @@ jobs:
         env:
           GH_USERNAME: ${{ github.repository_owner }}
           STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
+          TZ: Asia/Kolkata
         run: node scripts/generate-stats.mjs
 
       - name: Commit updated SVGs
